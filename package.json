@@ -5,7 +5,15 @@
   "files": [
     "src"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "main": "src/index.ts",
   "author": "Nikola Lazarov",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "29.5.14",
+    "jest": "29.7.0",
+    "ts-jest": "29.2.5"
+  }
 }

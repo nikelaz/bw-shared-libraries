@@ -1,8 +1,8 @@
 export class CurrencyFormatter {
   numberFormat: Intl.NumberFormat;
 
-  constructor(currency: string) {
-    this.numberFormat = Intl.NumberFormat(undefined, {
+  constructor(currency: string, locale?: string) {
+    this.numberFormat = Intl.NumberFormat(locale, {
       style: 'currency',
       currency: currency,
     });
