@@ -17,7 +17,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm install
       - run: npm run test
-  test:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
