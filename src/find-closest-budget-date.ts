@@ -1,11 +1,11 @@
 import type { Budget } from './types/budget';
 
-export const parseBudget = (budgets: Budget[]) => budgets.map(budget => ({
+export const parseBudget = (budgets: Partial<Budget>[]) => budgets.map(budget => ({
   ...budget,
-  month: new Date(budget.month),
+  month: budget.month ? new Date(budget.month) : new Date(),
 }));
 
-export const findClosestBudgetDate = (referenceDate: Date, budgets: Array<Budget>): Budget | null => {
+export const findClosestBudgetDate = (referenceDate: Date, budgets: Array<Partial<Budget>>): Partial<Budget> | null => {
   if (budgets.length === 0) return null;
 
   const currentMonth = new Date().getMonth();
