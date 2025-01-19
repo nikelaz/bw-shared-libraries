@@ -12,7 +12,7 @@ export type Category = {
   id: number,
   type: CategoryType,
   title: string,
-  accNumber: number,
+  accAmount: number,
   user?: User,
   categoryBudgets?: Array<CategoryBudget>
 };
